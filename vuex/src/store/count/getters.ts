@@ -1,11 +1,11 @@
 import { GetterTree } from 'vuex';
 import { RootState } from '..';
-import { CountState } from './state';
+import { CounterState } from './state';
 
-export const CountGetters = {
-    count: '[count] returns count state as computed property',
+export const CounterGetters = {
+    count: '[counter] returns count state as computed property',
 };
 
-export const getters: GetterTree<CountState, RootState> = {
-    [CountGetters.count]: ({ count }: CountState) => count,
+export const getters: GetterTree<CounterState, RootState> = {
+    [CounterGetters.count]: ({ count }: CounterState) => count,
 }

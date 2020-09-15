@@ -1,16 +1,15 @@
 import { ActionTree, GetterTree } from 'vuex'
 import { RootState } from '..'
-import { CountMutations } from './mutations'
-import { CountState } from './state'
+import { CounterMutations } from './mutations'
+import { CounterState } from './state'
 
-export const CountActions = {
-    loadCount: '[count] loading count from api request'
+export const CounterActions = {
+    loadCount: '[counter] loading count from api request'
 }
 
-export const actions: ActionTree<CountState, RootState> = {
-    // async & imperative component logic relating to state can go here
-    [CountActions.loadCount]: ({ commit }) => {
+export const actions: ActionTree<CounterState, RootState> = {
+    [CounterActions.loadCount]: ({ commit }) => {
         const mockApiResponse = Math.round(Math.random() * 100);
-        commit(CountMutations.setCount, mockApiResponse);
+        commit(CounterMutations.setCount, mockApiResponse);
     }
 }

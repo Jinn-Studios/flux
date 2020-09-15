@@ -13,13 +13,17 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import { Getter, Action, Mutation } from "vuex-class";
-import { CountActions, CountGetters, CountMutations } from "@/store/count";
+import {
+  CounterActions,
+  CounterGetters,
+  CounterMutations
+} from "@/store/count";
 
 @Component
 export default class Counter extends Vue {
-  @Getter(CountGetters.count) count!: number;
-  @Mutation(CountMutations.setCount) setCount!: (value: number) => void;
-  @Mutation(CountMutations.reset) reset!: () => void;
-  @Action(CountActions.loadCount) loadCount!: () => void;
+  @Getter(CounterGetters.count) count!: number;
+  @Mutation(CounterMutations.setCount) setCount!: (value: number) => void;
+  @Mutation(CounterMutations.reset) reset!: () => void;
+  @Action(CounterActions.loadCount) loadCount!: () => void;
 }
 </script>

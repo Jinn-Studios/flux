@@ -1,17 +1,17 @@
 import { MutationTree } from 'vuex';
 import { count } from '.';
-import { CountState, countStateDefaults } from './state';
+import { CounterState, CounterStateDefaults } from './state';
 
-export const CountMutations = {
-    setCount: '[count] commits mutation to count state',
-    reset: '[count] reset count state to defaults',
+export const CounterMutations = {
+    setCount: '[counter] commits mutation to count state',
+    reset: '[counter] reset count state to defaults',
 }
 
-export const mutations: MutationTree<CountState> = {
-    [CountMutations.setCount]: (state: CountState, payload: number) => {
+export const mutations: MutationTree<CounterState> = {
+    [CounterMutations.setCount]: (state: CounterState, payload: number) => {
         state.count = payload;
     },
-    [CountMutations.reset]: (state: CountState) => {
-        Object.assign(state, countStateDefaults);
+    [CounterMutations.reset]: (state: CounterState) => {
+        Object.assign(state, CounterStateDefaults);
     },
 };

@@ -1,6 +1,6 @@
-export interface CountState {
+export interface CounterState {
     count: number;
 }
-export const countStateDefaults = {
+export const CounterStateDefaults = {
     count: 0,
 };

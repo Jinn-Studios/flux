@@ -1,15 +1,15 @@
-import { CountState, countStateDefaults } from './state';
+import { CounterState, CounterStateDefaults } from './state';
 import { Module } from 'vuex';
 import { getters } from './getters';
 import { mutations } from './mutations';
 import { actions } from './actions';
 import { RootState } from '..';
-export { CountGetters } from './getters';
-export { CountMutations } from './mutations';
-export { CountActions } from './actions';
+export { CounterGetters } from './getters';
+export { CounterMutations } from './mutations';
+export { CounterActions } from './actions';
 
-export const count: Module<CountState, RootState> = {
-    state: Object.assign({}, countStateDefaults),
+export const count: Module<CounterState, RootState> = {
+    state: Object.assign({}, CounterStateDefaults),
     getters,
     mutations,
     actions,
