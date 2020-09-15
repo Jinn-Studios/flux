@@ -2,10 +2,10 @@
   <div class="home">
     <h1>Counter</h1>
     <p>{{ count }}</p>
-    <button v-on="{ click: () => setCount(count + 1) }">increment</button>
-    <button v-on="{ click: () => setCount(count - 1) }">decrement</button>
-    <button v-on:click="loadCount">load random</button>
-    <button v-on:click="reset">reset</button>
+    <button v-on="{ click: () => setCount(count + 1) }">Increment</button>
+    <button v-on="{ click: () => setCount(count - 1) }">Decrement</button>
+    <button v-on:click="loadCount">Load Random</button>
+    <button v-on:click="reset">Reset</button>
   </div>
 </template>
 
